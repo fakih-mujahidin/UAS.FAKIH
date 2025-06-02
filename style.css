@@ -1,0 +1,425 @@
+/* ===========================
+   RESET & UMUM
+=========================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ :root {
+        --primary: #01161e;       /* rich black */
+        --secondary: #124559;     /* midnight green */
+        --accent: #598392;        /* air force blue */
+        --neutral: #aec3b0;       /* ash gray */
+        --highlight: #eff6e0;     /* beige */
+    }
+
+
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--highlight);
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ===========================
+     NAVBAR
+=========================== */
+.nav-container {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background-color: var(--primary);
+    padding: 15px 20px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo-nav {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.logo-nav img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+.ul-nav {
+    list-style: none;
+    display: flex;
+    align-self: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.ul-nav li a {
+    color: var(--neutral);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.ul-nav li a:hover {
+    background-color: var(--secondary);
+    color: var(--accent);
+}
+
+/* Dropdown */
+.dropdown-nav {
+    position: relative;
+}
+
+.ul-dropdown {
+    position: absolute;
+    display: none;
+    background-color: var(--primary);
+    list-style: none;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+}
+
+.ul-dropdown li {
+    margin-bottom: 5px;
+}
+
+.ul-dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+.dropdown-nav:hover .ul-dropdown {
+    display: block;
+}
+
+.ul-dropdown a {
+    color: var(--neutral);
+    text-decoration: none;
+    padding: 5px 10px;
+    display: block;
+}
+
+.ul-dropdown a:hover {
+    background-color: var(--secondary);
+}
+
+/* ===========================
+     HOME SECTION
+=========================== */
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 0;
+    background-color: var(--neutral);
+    flex-wrap: wrap;
+    border-radius: 0px 0px 8px 8px;
+}
+
+.home-container img {
+    width: 250px;
+    border-radius: 12px;
+    padding: 5px;
+    background: linear-gradient(135deg, var(--accent), var(--highlight), var(--primary));
+    box-shadow: 0 8px 20px rgba(1, 22, 30, 0.2); /* pakai warna --primary dalam bentuk rgba */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-container img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 25px rgba(1, 22, 30, 0.3);
+}
+
+
+.text-home h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.text-home h2 {
+    font-size: 1.2em;
+    color: var(--secondary);
+    margin-bottom: 20px;
+}
+
+.about-home {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--neutral);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.about-home:hover {
+    background-color: var(--secondary);
+}
+
+/* ===========================
+     ABOUT SECTION
+=========================== */
+.about-container {
+    background-color: var(--neutral);
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+.about-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+}
+
+.text-about {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.text-about p {
+    text-align: justify;
+    text-indent: 50px;
+    line-height: 1.6;
+    flex: 1;
+    min-width: 250px;
+}
+
+.text-about img {
+    width: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 0 8px rgba(188, 108, 37, 0.15);
+}
+
+/* ===========================
+     PORTOFOLIO SECTION
+=========================== */
+#portofolio {
+    background-color: var(--neutral);
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+#portofolio h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.tambah_data {
+    display: inline-block;
+    text-decoration: none;
+    background-color: var(--primary);
+    color: var(--neutral);
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.tambah_data:hover {
+    background-color: var(--secondary);
+}
+
+#portofolio table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--neutral);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#portofolio th,
+#portofolio td {
+    border: 1px solid var(--highlight);
+    padding: 12px;
+    text-align: center;
+}
+
+#portofolio th {
+    background-color: var(--primary);
+    color: var(--neutral);
+}
+
+#portofolio td img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+/* ===========================
+     OPINI SECTION
+=========================== */
+.opini-section {
+    background-color: var(--neutral);
+    padding: 40px 20px;
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+.section-title {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+}
+
+.opini-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.opini-card {
+    background: var(--neutral);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 12px rgba(188, 108, 37, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.opini-card:hover {
+    transform: translateY(-5px);
+}
+
+.opini-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.opini-info {
+    padding: 16px;
+}
+
+.opini-info h3 {
+    text-align: center;
+    margin: 0 0 8px;
+    font-size: 18px;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.opini-info p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--secondary);
+}
+
+/* ===========================
+     CONTACT SECTION
+=========================== */
+.contact-container {
+    background-color: var(--neutral);
+    padding: 40px 20px;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.contact-container h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary);
+    padding-bottom: 5px;
+}
+
+.container-contact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form, iframe {
+    flex: 1 1 48%;
+    box-sizing: border-box;
+    min-width: 300px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    font-size: 1em;
+    border: 1px solid var(--highlight);
+    border-radius: 5px;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 50px;
+}
+
+form button {
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--neutral);
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--secondary);
+}
+
+iframe {
+    width: 50%;
+    height: 335px;
+    border-radius: 5px;
+    margin-top: 0px;
+}
+
+/* ===========================
+     FOOTER
+=========================== */
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 40px;
+    background-color: var(--primary);
+    color: var(--accent);
+    border-top: 2px solid var(--secondary);
+}
